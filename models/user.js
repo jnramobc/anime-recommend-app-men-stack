@@ -16,7 +16,7 @@ const animeSchema = new mongoose.Schema({
   }
 });
 
-const userSchema = mongoose.Schema({
+const userSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
@@ -25,7 +25,7 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  animeList: [animeSchema] 
+  animes: [animeSchema] 
 });
 
 const User = mongoose.model('User', userSchema);
