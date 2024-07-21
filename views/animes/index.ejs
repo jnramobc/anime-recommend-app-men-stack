@@ -9,5 +9,10 @@
     <%- include('../partials/_navbar.ejs') %>
   <h1>Your Anime List</h1>
   <a href="/users/<%= user._id %>/animes/new">Add a New Anime</a>
+  <ul>
+    <% animes.forEach((anime) => { %>
+      <li><%= anime.title %> - <%= anime.status %></li>
+    <% }) %>
+  </ul>
 </body>
 </html>
