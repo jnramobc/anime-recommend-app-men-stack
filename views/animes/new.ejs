@@ -10,23 +10,26 @@
 <body>
   <%- include('../partials/_navbar.ejs') %>
   <h1>Add a New Anime</h1>
-  <form action="/users/<%= user._id %>/animes" method="POST">
-    <label for="title">Title:</label>
-    <input type="text" name="title" id="title" required>
-    
-    <label for="status">Status:</label>
-    <select id="status" name="status">
-      <option value="planning">Planning to Watch</option>
-      <option value="watching">Watching</option>
-      <option value="completed">Completed</option>
-      <option value="on-hold">On-Hold</option>
-      <option value="dropped">Dropped</option>
-    </select>
-    
-    <label for="recommended">Recommended:</label>
-    <input type="checkbox" name="recommended" id="recommended">
-    
-    <button type="submit">Add Anime</button>
-  </form>
+<!-- views/animes/new.ejs -->
+<form action="/users/<%= user._id %>/animes" method="POST">
+  <label for="title">Title:</label>
+  <input type="text" name="title" id="title" required>
+  
+  <label for="status">Status:</label>
+  <select id="status" name="status">
+    <option value="Interested">Interested</option>
+    <option value="Watching">Watching</option>
+    <option value="Completed">Completed</option>
+    <option value="On Hold">On Hold</option>
+    <option value="Dropped">Dropped</option>
+    <option value="Plan to Watch">Plan to Watch</option>
+  </select>
+
+  <label for="recommended">Recommended:</label>
+  <input type="checkbox" name="recommended" id="recommended">
+
+  <button type="submit">Add Anime</button>
+</form>
+
 </body>
 </html>

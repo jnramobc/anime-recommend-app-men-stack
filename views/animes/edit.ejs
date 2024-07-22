@@ -1,0 +1,21 @@
+<!-- views/animes/edit.ejs -->
+<form action="/users/<%= userId %>/animes/<%= animeItem._id %>?_method=PUT" method="POST">
+  <label for="title">Title:</label>
+  <input type="text" name="title" id="title" value="<%= animeItem.title %>" required>
+  
+  <label for="status">Status:</label>
+  <select id="status" name="status">
+    <option value="Interested" <%= animeItem.status === 'Interested' ? 'selected' : '' %>>Interested</option>
+    <option value="Watching" <%= animeItem.status === 'Watching' ? 'selected' : '' %>>Watching</option>
+    <option value="Completed" <%= animeItem.status === 'Completed' ? 'selected' : '' %>>Completed</option>
+    <option value="On Hold" <%= animeItem.status === 'On Hold' ? 'selected' : '' %>>On Hold</option>
+    <option value="Dropped" <%= animeItem.status === 'Dropped' ? 'selected' : '' %>>Dropped</option>
+    <option value="Plan to Watch" <%= animeItem.status === 'Plan to Watch' ? 'selected' : '' %>>Plan to Watch</option>
+  </select>
+
+  <label for="recommended">Recommended:</label>
+  <input type="checkbox" name="recommended" id="recommended" <%= animeItem.recommended ? 'checked' : '' %>>
+
+  <button type="submit">Save</button>
+</form>
+

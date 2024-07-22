@@ -3,17 +3,16 @@ const mongoose = require('mongoose');
 const animeSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true
+    required: true,
   },
   status: {
     type: String,
-    enum: ['plan to watch', 'watching', 'completed', 'dropped'],
-    required: true
+    enum: ['Interested', 'Watching', 'Completed', 'On Hold', 'Dropped', 'Plan to Watch'],
   },
   recommended: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 });
 
 const userSchema = new mongoose.Schema({
@@ -25,9 +24,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  animes: [animeSchema] 
+  animes: [animeSchema],
 });
 
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
+

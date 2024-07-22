@@ -10,6 +10,9 @@ const authController = require('./controllers/auth.js');
 const isSignedIn = require('./middleware/is-signed-in.js');
 const passUserToView = require('./middleware/pass-user-to-view.js');
 const animeController = require('./controllers/animes.js');
+const usersController = require('./controllers/users');
+
+
 
 const port = process.env.PORT ? process.env.PORT : '3000';
 
@@ -20,8 +23,7 @@ mongoose.connection.on('connected', () => {
 });
 
 app.use(express.urlencoded({ extended: false }));
-app.use(methodOverride('_method'));
-// app.use(morgan('dev'));
+app.use(methodOverride('_method'))
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -29,8 +31,8 @@ app.use(
     saveUninitialized: true,
   })
 );
-
-app.use(passUserToView); // use passUserToView middleware here
+app.use(passUserToView);
+app.use('/users', usersController);
 
 app.get('/', (req, res) => {
   // Check if the user is signed in

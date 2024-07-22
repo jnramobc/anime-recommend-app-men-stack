@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Anime List</title>
+  <title><%= user.username %>'s Anime List</title>
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
-  <h1>Your Anime List</h1>
-  <a href="/users/<%= user._id %>/animes/new">Add a New Anime</a>
+  <h1><%= user.username %>'s Anime List</h1>
   <ul>
-    <% animes.forEach((anime) => { %>
+    <% user.animes.forEach((anime) => { %>
       <li>
         <%= anime.title %> - <%= anime.status %> - 
         <% if (anime.recommended) { %>
@@ -18,10 +17,6 @@
         <% } else { %>
           Not Recommended
         <% } %>
-        <a href="/users/<%= user._id %>/animes/<%= anime._id %>/edit">Edit</a>
-        <form action="/users/<%= user._id %>/animes/<%= anime._id %>?_method=DELETE" method="POST" style="display: inline;">
-          <button type="submit">Delete</button>
-        </form>
       </li>
     <% }) %>
   </ul>
