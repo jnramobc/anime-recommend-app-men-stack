@@ -12,6 +12,9 @@
     <% user.animes.forEach((anime) => { %>
       <li>
         <%= anime.title %> - <%= anime.status %>
+        <% if (anime.notes) { %>
+          - "<%= anime.notes %>"
+        <% } %>
         <% if (anime.recommended) { %>
           <span> - Recommended</span>
         <% } else { %>
@@ -22,3 +25,4 @@
   </ul>
 </body>
 </html>
+

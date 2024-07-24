@@ -13,6 +13,9 @@ const animeSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  notes: {
+    type: String,
+  },
 });
 
 const userSchema = new mongoose.Schema({

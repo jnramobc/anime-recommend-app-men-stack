@@ -40,8 +40,15 @@ router.post('/', async (req, res) => {
 router.delete('/:animeId', async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
-    currentUser.animes.id(req.params.animeId).remove();
+    const animeItem = currentUser.animes.id(req.params.animeId);
+
+    if (!animeItem) {
+      return res.status(404).send('Anime not found');
+    }
+
+    currentUser.animes.pull({ _id: req.params.animeId }); // Remove the anime item using the pull method
     await currentUser.save();
+    
     res.redirect(`/users/${currentUser._id}/animes`);
   } catch (error) {
     console.log(error);
@@ -70,6 +77,7 @@ router.put('/:animeId', async (req, res) => {
     animeItem.title = req.body.title;
     animeItem.status = req.body.status;
     animeItem.recommended = req.body.recommended === 'on';
+    animeItem.notes = req.body.notes;
 
     await currentUser.save();
     res.redirect(`/users/${currentUser._id}/animes`);
@@ -78,6 +86,7 @@ router.put('/:animeId', async (req, res) => {
     res.redirect('/');
   }
 });
+
 
 
 module.exports = router;

@@ -16,6 +16,11 @@
   <label for="recommended">Recommended:</label>
   <input type="checkbox" name="recommended" id="recommended" <%= animeItem.recommended ? 'checked' : '' %>>
 
+
+  <label for="notes">Notes:</label>
+  <textarea name="notes" id="notes"><%= animeItem.notes %></textarea>
+  <button type="submit">Update Anime</button>
+
   <button type="submit">Save</button>
 </form>
 

@@ -12,7 +12,10 @@
   <ul>
     <% animes.forEach((anime) => { %>
       <li>
-        <%= anime.title %> - <%= anime.status %> - 
+        <%= anime.title %> - <%= anime.status %>
+        <% if (anime.notes && anime.notes.trim().length > 0) { %>
+          - "<%= anime.notes %>"
+        <% } %>
         <% if (anime.recommended) { %>
           Recommended
         <% } else { %>
