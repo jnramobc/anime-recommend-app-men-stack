@@ -9,16 +9,24 @@ body {
   background-color: rgb(210, 25, 235);
 }
 
+/* Content adjustment for pages to account for fixed navbar */
+.content-container {
+  padding-top: 100px; /* Adjust this value if your navbar height changes */
+}
+
 .navbar-header {
   display: flex;
   flex-direction: row;
-  height: 15%;
-  width: 100%;
+  align-items: center; /* Ensure the items are centered vertically */
+  width: 100%; /* Ensure the navbar spans the entire width */
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.6); /* Adding a semi-transparent background */
   padding: 10px 20px; /* Adding padding for better spacing */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 2;
+  position: fixed; /* Fix the navbar at the top */
+  top: 0;
+  left: 0;
 }
 
 .logo-container {
@@ -58,13 +66,17 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
+  flex-wrap: wrap; /* Allow the items to wrap if necessary */
 }
 
 .nav-links > a {
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 5px; /* Reduce margin to fit more items */
   font-weight: bold;
   color: white;
+  background-color: rgba(0, 0, 0, 0.6); /* Adding a semi-transparent background */
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 .nav-links {
@@ -172,6 +184,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
+  padding-top: 100px; /* Ensure the content is not covered by the navbar */
 }
 
 .anime-list-container h1 {
@@ -202,6 +215,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
+  padding-top: 100px; /* Ensure the content is not covered by the navbar */
 }
 
 .anime-list-title {
@@ -334,12 +348,14 @@ body {
 }
 
 /* Edit Anime page styles */
-.edit-anime-container {
+.edit-anime-container,
+.new-anime-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 80vh;
+  padding-top: 100px; /* Ensure the content is not covered by the navbar */
 }
 
 .edit-anime-container h1 {
@@ -415,14 +431,6 @@ body {
   background-color: black;
 }
 
-/* New Anime page styles */
-.new-anime-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-}
 
 .new-anime-container h1 {
   margin-bottom: 20px;
@@ -518,4 +526,10 @@ body {
 .landing-content p {
   font-size: 1.5em;
   margin-bottom: 0;
+}
+
+.community-container {
+  text-align: center;
+  padding: 20px;
+  padding-top: 100px; /* Ensure the content is not covered by the navbar */
 }
