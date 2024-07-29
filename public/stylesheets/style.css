@@ -9,22 +9,21 @@ body {
   background-color: rgb(210, 25, 235);
 }
 
-/* Content adjustment for pages to account for fixed navbar */
 .content-container {
-  padding-top: 100px; /* Adjust this value if your navbar height changes */
+  padding-top: 100px; 
 }
 
 .navbar-header {
   display: flex;
   flex-direction: row;
-  align-items: center; /* Ensure the items are centered vertically */
-  width: 100%; /* Ensure the navbar spans the entire width */
+  align-items: center; 
+  width: 100%; 
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.6); /* Adding a semi-transparent background */
-  padding: 10px 20px; /* Adding padding for better spacing */
+  background-color: rgba(0, 0, 0, 0.6); 
+  padding: 10px 20px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 2;
-  position: fixed; /* Fix the navbar at the top */
+  position: fixed; 
   top: 0;
   left: 0;
 }
@@ -66,15 +65,15 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  flex-wrap: wrap; /* Allow the items to wrap if necessary */
+  flex-wrap: wrap; 
 }
 
 .nav-links > a {
   text-decoration: none;
-  margin: 0 5px; /* Reduce margin to fit more items */
+  margin: 0 5px;
   font-weight: bold;
   color: white;
-  background-color: rgba(0, 0, 0, 0.6); /* Adding a semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.6); 
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -184,7 +183,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
-  padding-top: 100px; /* Ensure the content is not covered by the navbar */
+  padding-top: 100px; 
 }
 
 .anime-list-container h1 {
@@ -215,13 +214,13 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
-  padding-top: 100px; /* Ensure the content is not covered by the navbar */
+  padding-top: 100px; 
 }
 
 .anime-list-title {
   margin-bottom: 20px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.6); /* Adding a semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.6); 
   padding: 10px;
   border-radius: 10px;
   display: inline-block;
@@ -305,7 +304,7 @@ body {
 .community-container h1 {
   margin-bottom: 20px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.6); /* Adding a semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.6); 
   padding: 10px;
   border-radius: 10px;
   display: inline-block;
@@ -355,13 +354,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 80vh;
-  padding-top: 100px; /* Ensure the content is not covered by the navbar */
+  padding-top: 100px; 
 }
 
 .edit-anime-container h1 {
   margin-bottom: 20px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.6); /* Adding a semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.6); 
   padding: 10px;
   border-radius: 10px;
 }
@@ -435,7 +434,7 @@ body {
 .new-anime-container h1 {
   margin-bottom: 20px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.6); /* Adding a semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.6); 
   padding: 10px;
   border-radius: 10px;
 }
@@ -509,7 +508,7 @@ body {
 .landing-content {
   text-align: center;
   padding: 50px;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+  background-color: rgba(0, 0, 0, 0.5); 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: auto;
@@ -531,5 +530,5 @@ body {
 .community-container {
   text-align: center;
   padding: 20px;
-  padding-top: 100px; /* Ensure the content is not covered by the navbar */
+  padding-top: 100px; 
 }

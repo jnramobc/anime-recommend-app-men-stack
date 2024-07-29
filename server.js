@@ -21,7 +21,7 @@ const path = require('path');
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on('connected', () => {
-  console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
+  
 });
 
 app.use(express.urlencoded({ extended: false }));
@@ -55,6 +55,6 @@ app.use(isSignedIn); // use isSignedIn middleware here
 app.use('/users/:userId/animes', animeController);
 
 app.listen(port, () => {
-  console.log(`The express app is ready on port ${port}!`);
+ 
 });
 

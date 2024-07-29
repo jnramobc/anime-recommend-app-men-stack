@@ -46,7 +46,7 @@ router.delete('/:animeId', async (req, res) => {
       return res.status(404).send('Anime not found');
     }
 
-    currentUser.animes.pull({ _id: req.params.animeId }); // Remove the anime item using the pull method
+    currentUser.animes.pull({ _id: req.params.animeId }); 
     await currentUser.save();
     
     res.redirect(`/users/${currentUser._id}/animes`);
