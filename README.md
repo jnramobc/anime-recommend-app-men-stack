@@ -2,7 +2,7 @@ Anime Recommend!
 
 <img width="1096" alt="landing-background" src="https://github.com/user-attachments/assets/40a1df8b-3fce-41d1-81d6-525e32fc76a7">
 
-This web application allows guests to share their favorite anime with their friends and fello anime lovers alike.
+This web application allows guests to share their favorite anime with their friends and fellow anime lovers alike.
 
 
 getting started:
