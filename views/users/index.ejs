@@ -8,14 +8,20 @@
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
-  <h1>Explore Our Community</h1>
-  <ul>
-    <% users.forEach((user) => { %>
-      <li>
-        <a href="/users/<%= user._id %>"><%= user.username %></a>
-      </li>
-    <% }) %>
-  </ul>
+  <div class="community-container">
+    <h1>Explore Our Community</h1>
+    <ul class="user-list">
+      <% users.forEach((user) => { %>
+        <li>
+          <a href="/users/<%= user._id %>"><%= user.username %></a>
+        </li>
+      <% }) %>
+    </ul>
+    <div class="binoculars-icon-container">
+      <img src="/images/binoculars.png" alt="Binoculars Icon" class="binoculars-icon">
+    </div>
+  </div>
 </body>
 </html>
+
 

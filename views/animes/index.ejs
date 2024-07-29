@@ -8,26 +8,29 @@
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
-  <h1>Your Anime List</h1>
-  <a href="/users/<%= user._id %>/animes/new">Add a New Anime</a>
-  <ul>
-    <% animes.forEach((anime) => { %>
-      <li>
-        <%= anime.title %> - <%= anime.status %>
-        <% if (anime.notes && anime.notes.trim().length > 0) { %>
-          - "<%= anime.notes %>"
-        <% } %>
-        <% if (anime.recommended) { %>
-          Recommended
-        <% } else { %>
-          Not Recommended
-        <% } %>
-        <a href="/users/<%= user._id %>/animes/<%= anime._id %>/edit">Edit</a>
-        <form action="/users/<%= user._id %>/animes/<%= anime._id %>?_method=DELETE" method="POST" style="display: inline;">
-          <button type="submit">Delete</button>
-        </form>
-      </li>
-    <% }) %>
-  </ul>
+  <div class="anime-list-container">
+    <h1>Your Anime List</h1>
+    <a href="/users/<%= user._id %>/animes/new" class="add-anime-btn">Add a New Anime</a>
+    <div class="anime-cards">
+      <% animes.forEach((anime) => { %>
+        <div class="anime-card">
+          <h2><%= anime.title %></h2>
+          <p>Status: <%= anime.status %></p>
+          <% if (anime.notes && anime.notes.trim().length > 0) { %>
+            <p>Notes: "<%= anime.notes %>"</p>
+          <% } %>
+          <p>
+            <%= anime.recommended ? 'Recommended' : 'Not Recommended' %>
+          </p>
+          <div class="anime-card-actions">
+            <a href="/users/<%= user._id %>/animes/<%= anime._id %>/edit" class="edit-btn">Edit</a>
+            <form action="/users/<%= user._id %>/animes/<%= anime._id %>?_method=DELETE" method="POST">
+              <button type="submit" class="delete-btn">Delete</button>
+            </form>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
 </body>
 </html>

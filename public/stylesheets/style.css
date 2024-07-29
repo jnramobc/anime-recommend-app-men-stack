@@ -48,12 +48,11 @@ body {
   margin: 0 0 0 -8px;
 }
 
-.auth-links,
 .nav-links {
-  margin: 25px 20px;
+  display: flex;
+  align-items: center;
 }
 
-.auth-links > a,
 .nav-links > a {
   text-decoration: none;
   margin: 0 10px;
@@ -61,10 +60,35 @@ body {
   color: black;
 }
 
-.auth-links > a:hover,
 .nav-links > a:hover {
   color: #6f8dae;
   text-decoration: underline;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.search-form input[type="text"] {
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-form button {
+  padding: 5px 10px;
+  background-color: #274c9c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: black;
 }
 
 /* Sign up and Sign in styles */
@@ -120,3 +144,254 @@ body {
   background-color: black;
 }
 
+/* Anime list styles */
+.anime-list-container {
+  padding: 20px;
+  text-align: center;
+  background-image: url('/images/anime-list.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.anime-list-container h1 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.add-anime-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #274c9c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.add-anime-btn:hover {
+  background-color: black;
+}
+
+/* Background style for user's anime list view */
+.profile-anime-list-container {
+  padding: 20px;
+  text-align: center;
+  background-image: url('/images/community-profile.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.anime-list-title {
+  margin-bottom: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6); /* Adding a semi-transparent background */
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+
+.anime-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.anime-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: left;
+}
+
+.anime-card h2 {
+  margin-top: 0;
+  font-size: 1.4em;
+  color: #333;
+}
+
+.anime-card p {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.star-icon {
+  width: 1em;  
+  height: 1em; 
+  vertical-align: middle; 
+  margin-left: 5px;
+}
+
+.anime-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.edit-btn, .delete-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.edit-btn {
+  background-color: #6f8dae;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: black;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: black;
+}
+
+/* Community page styles */
+.community-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.community-container h1 {
+  margin-bottom: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6); /* Adding a semi-transparent background */
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.user-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-list li {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.user-list li a {
+  text-decoration: none;
+  color: white;
+  background-color: #274c9c;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.user-list li a:hover {
+  background-color: #6f8dae;
+}
+
+.binoculars-icon-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.binoculars-icon {
+  width: 25%;
+  max-width: 150px;
+  height: auto;
+}
+
+/* Edit Anime page styles */
+.edit-anime-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.edit-anime-container h1 {
+  margin-bottom: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6); /* Adding a semi-transparent background */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.edit-anime-form {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.edit-anime-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.edit-anime-form input[type="text"],
+.edit-anime-form select,
+.edit-anime-form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.edit-anime-form input[type="checkbox"] {
+  margin-bottom: 20px;
+}
+
+.edit-anime-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.update-btn,
+.cancel-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.update-btn {
+  background-color: #274c9c;
+  margin-right: 10px;
+}
+
+.update-btn:hover {
+  background-color: black;
+}
+
+.cancel-btn {
+  background-color: #e74c3c;
+}
+
+.cancel-btn:hover {
+  background-color: black;
+}

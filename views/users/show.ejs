@@ -8,22 +8,28 @@
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
-  <h1><%= user.username %>'s Anime List</h1>
-  <ul>
-    <% user.animes.forEach((anime) => { %>
-      <li>
-        <%= anime.title %> - <%= anime.status %>
-        <% if (anime.notes) { %>
-          - "<%= anime.notes %>"
-        <% } %>
-        <% if (anime.recommended) { %>
-          <span> - Recommended</span>
-        <% } else { %>
-          <span> - Not Recommended</span>
-        <% } %>
-      </li>
-    <% }) %>
-  </ul>
+  <div class="profile-anime-list-container">
+    <h1 class="anime-list-title"><%= user.username %>'s Anime List</h1>
+    <div class="anime-cards">
+      <% user.animes.forEach((anime) => { %>
+        <div class="anime-card">
+          <h2><%= anime.title %></h2>
+          <p>Status: <%= anime.status %></p>
+          <% if (anime.notes) { %>
+            <p>Notes: "<%= anime.notes %>"</p>
+          <% } %>
+          <% if (anime.recommended) { %>
+            <p>Recommended <img src="/images/star.png" alt="Star Icon" class="star-icon"></p>
+          <% } else { %>
+            <p>Not Recommended</p>
+          <% } %>
+        </div>
+      <% }) %>
+    </div>
+  </div>
 </body>
 </html>
+
+
+
 
