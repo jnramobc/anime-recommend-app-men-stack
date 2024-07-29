@@ -16,6 +16,8 @@ const usersController = require('./controllers/users');
 
 const port = process.env.PORT ? process.env.PORT : '3000';
 
+const path = require('path');
+
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on('connected', () => {
@@ -24,6 +26,9 @@ mongoose.connection.on('connected', () => {
 
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'))
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -52,3 +57,4 @@ app.use('/users/:userId/animes', animeController);
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
 });
+

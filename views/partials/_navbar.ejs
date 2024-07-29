@@ -1,17 +1,27 @@
 <!-- views/partials/_navbar.ejs -->
-
 <nav>
-  <% if (user) { %>
-    <a href="/users/<%= user._id %>/animes">Your Anime</a>
-    <a href="/users">Explore Our Community</a>
-    <form action="/users/search" method="GET" style="display:inline;">
-      <input type="text" name="username" placeholder="Search Users">
-      <button type="submit">Search</button>
-    </form>
-    <a href="/auth/sign-out">Sign Out</a>
+  <% if(user) { %>
+  <div class="navbar-header">
+    <div class="logo-container">
+      <div class="ghost-icon"></div>
+      <h1>AnimeRecommend</h1>
+    </div>
+    <div class="nav-links">
+      <a href="/users/profile">Profile</a>
+      <a href="/animes">Your Anime List</a>
+      <a href="/auth/sign-out">Sign Out</a>
+    </div>
+  </div>
   <% } else { %>
-    <a href="/auth/sign-in">Sign In</a>
-    <a href="/auth/sign-up">Sign Up</a>
+  <div class="navbar-header">
+    <div class="logo-container">
+      <div class="ghost-icon"></div>
+      <h1>AnimeRecommend</h1>
+    </div>
+    <div class="auth-links">
+      <a href="/auth/sign-up">Sign Up</a>
+      <a href="/auth/sign-in">Sign In</a>
+    </div>
+  </div>
   <% } %>
 </nav>
-  

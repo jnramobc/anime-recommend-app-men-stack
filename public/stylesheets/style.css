@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(210, 25, 235);
+}
+
+/* Navbar styles */
+.navbar-header {
+  display: flex;
+  flex-direction: row;
+  height: 15%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: 20px 35px;
+}
+
+.logo-container > h1 {
+  margin: 0;
+  font-size: 1.4em;
+}
+
+.ghost-icon {
+  background-image: url('/images/ghost-icon.png');
+  width: 1.4em;
+  height: 1.4em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2px;
+  padding-left: 5px;
+}
+
+.landing-image {
+  background-image: url('/images/landing-background.png');
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 0 0 -8px;
+}
+
+.auth-links,
+.nav-links {
+  margin: 25px 20px;
+}
+
+.auth-links > a,
+.nav-links > a {
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  color: black;
+}
+
+.auth-links > a:hover,
+.nav-links > a:hover {
+  color: #6f8dae;
+  text-decoration: underline;
+}
+
+/* Sign up and Sign in styles */
+.form-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.form-card {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.form-card h1 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-card form label {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.form-card form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.form-card form button {
+  padding: 10px;
+  background-color: #274c9c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.form-card form button:hover {
+  background-color: black;
+}
+
